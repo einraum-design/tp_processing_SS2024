@@ -3,8 +3,6 @@ Kursmaterial TP Processing (p5js) Sommersemester 2024
 Kursdokumentation TP Processing TH|W–S FB Gestaltung  
 
 ## 25.3.2024 – HTML & CSS Basics
-
-## 13.10.2023 – Einfache Formen und Farben
 - [TP 0A](https://einraum-design.github.io/tp_processing_SS2024/TP0/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SS2024/blob/main/docs/TP0/index.html)
 
 ### HTML - Hypertext Markup Language
