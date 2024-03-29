@@ -63,12 +63,12 @@ Mit dem href Attribut wird das Ziel des Links definiert. Das Target gibt an, ob 
 Mit Stylesheets wird die Erscheinung der Webseite gesteuert. Es werden Farben, Abstände, Schriftarten, Größen etc festgelegt. 
 Styles können an unterschiedlichen Stellen geschrieben werden. 
 
-1. Direkt im HTML
+Direkt im HTML
 ```
 <p style="color: #ff0000">Ein Textabsatz</p> 
 ```
 
-2. Im head Bereich der Seite
+Im head Bereich der Seite
 ```
 <!DOCTYPE html>
 <html lang="de-DE" >
@@ -95,7 +95,7 @@ Styles können an unterschiedlichen Stellen geschrieben werden.
 </html> 
 ```
 
-3. Eine eigenständige .css Datei kann im head-Bereich der Seite verknüpft werden. Dies hat den Vorteil, dass die Datei für viele Seiten verwendent werden kann
+Eine eigenständige .css Datei kann im head-Bereich der Seite verknüpft werden. Dies hat den Vorteil, dass die Datei für viele Seiten verwendent werden kann
 ```
  <!DOCTYPE html>
 <html lang="de-DE" >
@@ -118,4 +118,4 @@ p {
 ```
 
 
-Tutorials und und eine Referenz für HTML, CSS (und weitere Web Sprachen):[w3schools](https://www.w3schools.com/)
+Tutorials und und eine Referenz für HTML, CSS (und weitere Web Sprachen): [w3schools](https://www.w3schools.com/)
