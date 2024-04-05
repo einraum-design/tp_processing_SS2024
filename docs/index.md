@@ -3,7 +3,7 @@ Kursmaterial TP Processing (p5js) Sommersemester 2024
 Kursdokumentation TP Processing TH|W–S FB Gestaltung  
 
 ## 25.3.2024 – HTML & CSS Basics
-- [TP 0A](https://einraum-design.github.io/tp_processing_SS2024/TP0/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SS2024/blob/main/docs/TP0/index.html)
+- [TP_0A](https://einraum-design.github.io/tp_processing_SS2024/TP_0A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SS2024/blob/main/docs/TP_0A/index.html)
 
 ### HTML - Hypertext Markup Language
 Ein html Dokument enthält den Textinhalte und Verlinkungen zu Bildern, Vidoes und weitern Multimedia Inhalten. 
@@ -119,8 +119,8 @@ p {
 Tutorials und und eine Referenz für HTML, CSS (und weitere Web Sprachen): [w3schools](https://www.w3schools.com/)
 
 ## 4.4.2024 – Einfache Formen und Farben
-- [TP 1A](https://einraum-design.github.io/tp_processing_SoSe24/TP_1A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_1A/sketch.js)
-- [TP 1B](https://einraum-design.github.io/tp_processing_SoSe24/TP_1B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_1B/sketch.js)
+- [TP_1A](https://einraum-design.github.io/tp_processing_SoSe24/TP_1A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_1A/sketch.js)
+- [TP_1B](https://einraum-design.github.io/tp_processing_SoSe24/TP_1B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_1B/sketch.js)
 
 
 ### Kommentare  
@@ -212,8 +212,8 @@ Mit noFill() und noStroke() kann auch keine Füllfarb oder keine Kontur festgele
 
 
 ## Grundstruktur setup & draw. Systemvariablen
-- [TP 2A](https://einraum-design.github.io/tp_processing_SoSe24/TP_2A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_2A/sketch.js)
-- [TP 2B](https://einraum-design.github.io/tp_processing_SoSe24/TP_2B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_2B/sketch.js)
+- [TP_2A](https://einraum-design.github.io/tp_processing_SoSe24/TP_2A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_2A/sketch.js)
+- [TP_2B](https://einraum-design.github.io/tp_processing_SoSe24/TP_2B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe24/blob/main/docs/TP_2B/sketch.js)
 
 
 ### function setup & draw
