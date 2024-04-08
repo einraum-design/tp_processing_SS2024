@@ -1,4 +1,4 @@
-# tp_processing_WS2023-24
+# tp_processing_SoSe2024
 Kursmaterial TP Processing (p5js) Sommersemester 2024
 Kursdokumentation TP Processing TH|W–S FB Gestaltung  
 
