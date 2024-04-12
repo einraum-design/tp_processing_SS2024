@@ -37,7 +37,7 @@ function draw() {
   // sin(frameCount)         --> -1 + 1
   // sin(frameCount)*50      --> -50 + 50
   // sin(frameCount)*50 +100 --> 50 + 150
-  ellipse(50,100+ sin(frameCount)*50, 80, 80);
+  ellipse(50,100 + sin(frameCount)*150, 80, 80);
 
 
 }
