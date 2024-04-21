@@ -52,6 +52,8 @@ function draw() {
   if(ellipseX <= 0){ 
     speedX = -speedX;
   }*/
+
+  
   if(ellipseX >= width || ellipseX <= 0){
     speedX = -speedX;
   }

@@ -319,3 +319,89 @@ Die Random Funktion git bei jedem Aufruf eine neue zufällige Zahl zurück.
 ```
 random(400); // gibt eine Zahl zwischen 0 und 400 zurück
 random(200, 400); // gibt eine Zahl zwischen 200 und 400 zurück
+```
+
+
+## Erweiterung if-Bedingungen
+- [TP_5A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_5A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_5A/sketch.js)
+- [TP_5B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_5B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_5B/sketch.js)
+
+### If - else
+Jeder if-Bedingung kann ein else Block angehängt werden. 
+Ist die Bedingung nicht erfüllt, wird der else-Block ausgeführt.
+
+```
+if(mouseIsPressed) {
+    // wenn Maus gedrückt ist Füllfarbe rot
+    fill(255, 0, 0);
+} else {
+    // ansonsten Füllfarbe weiß
+    fill(255);
+}
+```
+
+
+Zusätzlich können noch mehrere "else if" Blöcke an eine if-Bedingung angehängt werden.
+Dann werden die Bedingungen der Reihe nach gecheckt, bis eine Bedingung erfüllt ist.
+Sobald eine erfüllt ist, werden alle weitern "else if" und die "else" einfach übersprungen.
+Es wird also immer nur ein Block ausgeführt.
+
+```
+
+if(CONDITION1) {
+    // ist die erste Bedingung erfüllt wird der erste Block ausgeführt und alles weiteren Abfragen werden übersprungen
+} else if(CONDITION2) {
+    // ist die zweite Bedingung erfüllt wird der zweite Block ausgeführt und alles weiteren Abfragen werden übersprungen
+} ...
+else {
+    // wenn alle Bedingungen nicht erfüllt waren, wird der else Block ausgeführt
+}
+```
+
+## Event Listener
+
+Soll sich der Status des Buttons auf ein Event (zB. Click) hin umschalten, muss beachtet werden, dass der Wechsel nicht innerhalb der void draw mehrfach ausgeführt wird.
+Deshalb gibt es Event Händler, die auf bestimmte Events hin jeweils einmal ausgeführt werden. Diese stehen außerhalb der function setup() und der function draw().
+```
+// wird in dem Moment aufgerufen, wenn die Maustaste gedrückt wird.
+void mousePressed() {
+    // der Inhalt im Funktionsrumpf wird pro Click einmal ausgeführt.
+}
+```
+
+Weiter Eventhandler für Maus- und TastaturEvents sind in der Referenz zu finden.
+
+
+## Transformationen (verschieben, rotieren, skalieren)
+- [TP_6.1A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_6.1A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_6.1A/sketch.js)
+- [TP_6.2A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_6.2A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_6.2A/sketch.js)
+- [TP_6.1B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_6.1B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_6.1B/sketch.js)
+- [TP_6.2B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_6.2B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_6.2B/sketch.js)
+
+
+Um Zeichenelemente im Processing Sketch zu bewegen, gibt es einige Transformations Tools.
+
+Transformationen werden immer vom Nullpunkt des Koordinatensystems ausgeführt.
+Zu Beginn der void draw ist das Koordinatensystem immer in der linken oberen Ecke.
+Wird ein rotate(float Winkel) Befehl ausgeführt wird also alles um diese Ecke rotiert. 
+
+Um um einen anderen Mittelpunkt rotieren zu können, muss zuerst das Zeichenkoordinatensystem 
+an den gewünschten Mittelpunkt verschoben werden.
+Die geschieht über den translate(float x, float y) Befehl. Translate kann das Zeichenkoordinatensystem
+in x und y Richtung verschieben.
+
+Als drittes Transformationstool gibt es den scale(float x, float y) Befehl. 
+Dieser Skaliert das Koordinatensystem. Scale funktioniert mit positiven wie auch negativen Werten. Damit lassen sich Inhalte auch spiegeln. 
+
+Es können beliebig viele Transformationen hintereinander ausgeführt werden. 
+Jede Verschiebung und Rotation wird aber auf die vorherigen aufaddiert!
+Wenn das Koordinatensystem mit rotate() verdreht wurde und anschließend wieder 
+ein translate ausgeführt wird, wird das Koordinatensystem in die rotierte Richtung verschoben.
+
+Bei jedem Neustart der void draw() wird das Koordinatensystem wieder auf das Standart Koordinatensystem zurück gesetzt.
+
+Das Zeichenkoordiantensystem lässt sich innerhalb der void draw wieder auf Standartposition, Rotation und Skalierung zurücksetzen:
+
+```
+ resetMatrix();
+```
