@@ -68,6 +68,6 @@ function mouseReleased(){
   }
 
   // Kurzform
-  // schalterStatus = !schalterStatus;
+  //     schalterStatus = !schalterStatus;
 
 }

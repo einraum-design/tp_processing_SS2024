@@ -7,8 +7,11 @@ function setup() {
 function draw() {
   background(220);
 
+  
   // auf sketch Mitte verschieben
   translate(width/2, height/2);
+
+  //scale(-0.5, 0.5);
 
   // Sekundenzeiger 
 
@@ -57,7 +60,8 @@ function draw() {
 
   push();
     // hour() -> int: 0 - 24
-    let hourRotation = map(hour() + minute()/60, 0, 24, 0, 720);
+    let hourRotation = map(hour() , 0, 24, 0, 720);
+    //let hourRotation = map(hour() , 0, 12, 0, 360);
     
     rotate(hourRotation);
     stroke(0);
