@@ -405,3 +405,95 @@ Das Zeichenkoordiantensystem lässt sich innerhalb der void draw wieder auf Stan
 ```
  resetMatrix();
 ```
+
+
+## Funktionen mit und ohne Rückgabewert
+- [TP_8A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_7A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_7A/sketch.js)
+- [TP_7B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_7B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_7B/sketch.js)
+
+### Funktionen definieren
+Processing bietet einige vordefinierte Funktionen, wie zb. die ellipse(), map(), fill() … Funktionen.
+Wir können jedoch auch beliebig eigene Funktionen definieren.
+
+Sobald ein Programmteil mehrfach genutzt wird, sollte dieser Teil als Funktion ausgelagert werden um doppelten Code (der das Programm unübersichtlich macht und kopierfehler begünstigt) zu vermeiden. 
+
+Es können auch logische Programmteile zusammengefasst werden und als Funktion ausgelagert werden, um das Programm übersichtlicher zu gestalten. ZB. der Programmteil der ein Menü zeichnet ... 
+
+
+Eine Funktionsdefinition besteht aus vier Teilen:
+**Deklaration "function"**
+
+**Funktionsname**
+- beginnt mit einem Kleinbuchstaben
+- ein Wort! (Keine Leerzeichen/Kommas/Punkte)
+
+**Klammern (optional Paramater …)**
+
+```
+function myFunction (parameter1, parameter2){
+    // optional Rückgabewert
+    return result;
+
+}
+```
+
+Es lassen sich auch optionale Parameter in der Funktion definieren:
+```
+function myFunction (parameter1 = 100){
+    ...
+}
+```
+Wenn ein Parameter beim Funktionsaufruf mitgegeben wird, wird dieser als parameter1 gesetzt. Ansonsten wird der Standartwert – in diesem Fall "100" genutzt.
+
+
+Es lassen sich zwei Funktionstypen unterscheiden: 
+
+- Funktionen ohne Rückgabetyp:
+Bei Funktionsaufruf wird alles was im Rumpf steht einfach ausgeführt und danach kehrt das Programme wieder an die Stelle, an der die Funktion aufgerufen wurde zurück und führt die nächsten Befehle aus ...
+
+- Funktionen mit Rückgabetyp
+Am Ende des Funktionsaufrufs muss ein ein „return" mit dem Rückgabewert stehen. 
+die random() Funktion liefert zB. ein Fließkommerzahl zurück ...
+
+
+
+## Arrays und Objekte
+- [TP_8A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_8A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_8A/sketch.js)
+- [TP_8B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_8B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_8B/sketch.js)
+
+### Arrays
+Es gibt Array, bei denen jeder Wert über einen Index (Zahl von 0 - n) als Schlüssel angesprochen werden kann.
+Arrays werden über eckige Klammern gekennzeichnet:
+
+```
+ let myArray = [];
+```
+
+Arrays mit Werten initialisieren:
+```
+ let namesArray = ["Andres", "Tina", "Philipp"];
+```
+Der Zugriff auf die Werte erfolg über die den Index in den eckigen Klammern:
+```
+ let myArray[0] = "hello"; // wert "hello" an der Stelle 0 im Array
+```
+Bei Arrays kann man über das Attribut **length** abrufen, wie viele Werte in dem Array aktuell enthalten sind.
+Mit der Methode **.push()** lassen sich neue Werte an das Array hinten anhängen.
+
+
+### Objekte
+Objekte sind noch etwas allgemeiner gefasst. Hier sind die Schlüssel, um auf die einzelnen Werte von dem Objekt zugreifen zu können nicht festgelegt auf durchnummerierte Zahlen, sondern können jeder Begriff sein.
+Objekt werden über die geschweiften Klammern definiert:
+
+```
+ let myObject = {};
+```
+Schlüssel - Wert - Paare lassen sich einfach über den Punkt-Operator hinzufügen:
+```
+ let myObject = {}
+ myObject.name = "Otto";
+ myObject.alter = 43;
+
+ // oder über den Schlüssel als String ("") in eckigen Klammern hinzufügen:
+ myObject["sex"] = "male";
+```
