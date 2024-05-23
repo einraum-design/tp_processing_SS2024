@@ -29,6 +29,13 @@ function draw() {
 
 }
 
+// Bei den meisten Programmiersprachen 
+// beginnt eine Funktionsdefinition mit dem Typ der Rückgabe
+// void bei Funktionen ohne Rückgabe
+// void pacman(xpos, ypos, diameter) { CODE }
+// int addiere(zahl1, zahl2) { CODE } -> diese Funktion liefert eine Zahl zurück
+
+
 // Codewort function erstellt eine neue Funktion
 // function FUNKTIONSNAME( opt PARAMTER ) { FUNKTIONSRUMPF }
 function pacman(xPos, yPos, d, c = color(255, 255, 0), m = 45, r = 0){

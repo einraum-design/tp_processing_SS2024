@@ -408,7 +408,7 @@ Das Zeichenkoordiantensystem lässt sich innerhalb der void draw wieder auf Stan
 
 
 ## Funktionen mit und ohne Rückgabewert
-- [TP_8A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_7A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_7A/sketch.js)
+- [TP_7A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_7A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_7A/sketch.js)
 - [TP_7B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_7B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_7B/sketch.js)
 
 ### Funktionen definieren
@@ -482,6 +482,8 @@ Mit der Methode **.push()** lassen sich neue Werte an das Array hinten anhängen
 
 
 ### Objekte
+- [TP_9A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_9A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_9A/sketch.js)
+- [TP_9B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_9B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_9B/sketch.js)
 Objekte sind noch etwas allgemeiner gefasst. Hier sind die Schlüssel, um auf die einzelnen Werte von dem Objekt zugreifen zu können nicht festgelegt auf durchnummerierte Zahlen, sondern können jeder Begriff sein.
 Objekt werden über die geschweiften Klammern definiert:
 
@@ -497,3 +499,86 @@ Schlüssel - Wert - Paare lassen sich einfach über den Punkt-Operator hinzufüg
  // oder über den Schlüssel als String ("") in eckigen Klammern hinzufügen:
  myObject["sex"] = "male";
 ```
+
+## HTML - Grundstruktur jeder Webseite
+- [TP_10A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_10A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_10A/sketch.js)
+- [TP_10B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_10B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_10B/sketch.js)
+
+Um einen p5js Canvas an eine bestimmte Stelle im HTML Aufbau der Webseite zu platzieren ist der einfachste Weg:
+- Ein div Element mit einer ID an der gewünschten Stelle in der index.html Datei platzieren.
+
+```
+<div id="myCanvas"></div>
+```
+
+- im p5js Sketch angeben, dieses div als parent für das canvas Element bestimmen:
+
+```
+// Canvas erstellen:
+let cnv = createCanvas(800, 600);
+// Das Element mit der ID "myCanvas" als Elternobjekt setzen:
+cnv.parent("myCanvas");
+```
+
+
+### HTML Elemente mit p5js erstellen
+Im p5js Sketch lassen sich beliebig weitere HTML Elemente erstellen. Der Vorteil der HTML Element ist, dass sie im Gegensatz von auf dem Canvas gezeichneten Formen direkte Event Listener haben. Das heißt, dass wir direkt auf MouseOver oder Click reagiert werden kann. 
+Beispiel Button:
+
+```
+// Button erstellen:
+let button = createButton("click me");
+// An HTML Objekte kann direkt ein EventListener gehängt werden. Auf jeden Mausklick auf den button wird ausgeführt, wass in den Klammer angegeben wird.
+button.mousePressed( /* to do */ );
+```
+
+In den Klammern vom EventListener kann entweder eine *anonyme Funktion* oder ein Funktionsname angegeben werden:
+```
+// anonyme Funktion:
+button.mousePressed( ()=> { console.log("button wurde geklickt");} );
+
+// Funktionsaufruf
+button.mousePressed(meineFunktion); // meineFunktion(); muss dann im Programm definiert werden
+```
+
+### Videos einbinden
+
+Video können als eigenständiges HTML Element in eine Webseite eingebunden werden. 
+Ein Vidoe Element lässt sich mit folgender Zeile in p5js erstellen:
+```
+video = createVideo("assets/launch2.mp4");
+// es können auch Steuerungselemente beim HTML Video eingeblendet werden:
+video.showControls(true);
+```
+
+Wenn das Video allerdings auf das canvas Element gezeichnet werden soll, muss trotzdem ein Video Element erstellt werden. Hier wird das video allerdings im HTML ausgeblendent und dann nur auf den inhalt des Videoplayer zugegriffen.
+Das Video kann dann mit der image funktion auf das Canvas Element gezeichnet werden:
+```
+video = createVideo("assets/launch2.mp4");
+video.hide();
+
+// innerhalb der function draw()
+image(video, 0, 0);
+```
+
+MediaPlayer habe haben eigene Eventhandler, über die auf zB. Ende des Videos reagiert werden kann: 
+```
+// Listener der aufgerufen wird, wenn ein Video zu Ende gespielt ist
+video.onended(tue_etwas);
+
+// die function "tue_etwas" muss dann noch außerhalb der function setup() definiert werden
+function tue_etwas(elt){
+  console.log("Video ist zu Ende - schlafen gehen");
+  // zB. Videoelement ausblenden ...
+  elt.hide();
+}
+```
+
+### SoundFiles
+
+Audiowiedergabe ist nicht in der Standart p5js Bibliothek enthalten. Die Soundfunktionalität ist in einer eigenen Bibliothe. 
+Standartmäßig ist die Bibliothek aber dabei und schon in der index.html Datei verlinkt.
+
+Sound können ähnlich wie Bilder dem Sketch hinzugefügt werden.
+Es muss eine Variable für die Sounddatei angelegt werden.
+Anschließden kann der Sound abgespielt, geloopt oder pausiert oder gestoppt werden ...
