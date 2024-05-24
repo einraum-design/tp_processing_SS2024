@@ -31,6 +31,13 @@ function draw() {
 
 }
 
+// Bei Typstrengen Programmiersprachen wird als erster Wert der Rückgabetyp definiert
+// Bei Funktionen ohne Rückgabe: void
+// void packman(PARAMETER){ CODE }
+
+// Bei Funktionen mit Rückgabe
+// int addiere(PARAMETER){ CODE mit RETURN }
+
 // function FUNKTIONSNAME( optional PARAMETER ) { FUNKTIONSRUMPF }
 function pacman(xPos, yPos, diameter, m = 45, rot = 0, c = color(255, 255, 0)){
   let x = xPos;
