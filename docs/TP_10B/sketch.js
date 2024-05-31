@@ -37,7 +37,7 @@ function setup() {
 
   // Steuerungselemente ausblenden:
   myvideo.hideControls();
-  myvideo.hide();
+  //myvideo.hide();
 
   // ein neue Eigenschaft dem Video objekt anhängen:
   myvideo.isPlaying = false;

@@ -582,3 +582,43 @@ Standartmäßig ist die Bibliothek aber dabei und schon in der index.html Datei 
 Sound können ähnlich wie Bilder dem Sketch hinzugefügt werden.
 Es muss eine Variable für die Sounddatei angelegt werden.
 Anschließden kann der Sound abgespielt, geloopt oder pausiert oder gestoppt werden ...
+
+## Schleifen WHILE & FOR-LOOP
+- [TP_11A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_11A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_11A/sketch.js)
+- [TP_11B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_11B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_11B/sketch.js)
+
+Um Funktionen mehrfach auszuführen, gibt es unterschiedliche Schleifen Konstrukte (while-loop, do-while-loop, for-loop und for-each-loop).
+
+### WHILE-LOOP:
+
+Die while loop ist von der Syntax am einfachsten aufgebaut. 
+```
+  while (CONDITION) {
+    /* do something - Schleifenrumpf */
+  }
+```
+Die Bedingung wird überprüft - wenn die Bedingung true ist, wird der Schleifenrumpf ausgeführt.
+Anschließend wird die Bedingung erneut überprüft und der Schleifenrumpf erneut ausgeführt etc.
+Ist die Bedingung nicht erfüllt, wird die Wiederholung unterbrochen und das Programm nach der Schleife fortgesetzt.
+
+### FOR-LOOP
+Die for Schleife funktioniert sehr ähnlich der while Schleife.
+Als Parameter werden jedoch 3 Teile (statt nur der Bedingung) erwartet.
+
+- Im ersten Teil kann eine Variabel definiert werden. Diese ist dann nur innerhalb des Scheifenrumpfs gültig
+- Im zweiten Teil wird wie in der while Schleife eine Bedingung formuliert.
+- Der dritte Teil wird jeweils am Ende des Schleifenrumps aufgeführt. (Hier wird zB. die Zählervariabel nach jeder  Wiederholung inkrementiert).
+
+```
+// for (VARIABLE-DEFINITION; CONDITION; INCREMENTOR)
+  for (let i = 0; i < 20; i = i + 1) {
+    rotate(random(TWO_PI));
+    fill(100, 100 + i, random(200, 255));
+    ellipse(0, random(-100, 100), 10, 10);
+  }
+```
+
+## Beispiel für eine Programm mit mit mehreren Programmteilen:
+- [TP_12A](https://einraum-design.github.io/tp_processing_SoSe2024/TP_12A/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_12A/sketch.js)
+- [TP_12B](https://einraum-design.github.io/tp_processing_SoSe2024/TP_12B/index.html) [(--> Code)](https://github.com/einraum-design/tp_processing_SoSe2024/blob/main/docs/TP_12B/sketch.js)
+
