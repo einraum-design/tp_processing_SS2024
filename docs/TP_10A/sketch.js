@@ -30,12 +30,13 @@ function setup() {
   // () => { CODE }
   mybutton2.mouseClicked(() => {
     fullscreen(true);
+    mybutton2.hide();
   });
 
-  mybutton2.hide();
+  // mybutton2.show();
 
   myvideo = createVideo("assets/video.mp4");
-  myvideo.hideControls();
+  myvideo.showControls();
   myvideo.onended(() => { 
     console.log("video ended");
   });
